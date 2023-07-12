@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid</title>
+    <style>
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-gap: 20px;
+    grid-auto-rows: minmax(100px,auto);
+    grid-auto-columns: minmax(50px,auto);
+
+}
+.items{
+    background-color: aqua;
+    border: 4px green solid;
+    border-radius: 3px;
+}
+#item1{
+    grid-row-start: 1;
+    grid-row-end:5 ;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="items" id="item1">data1</div>
+        <div class="items">data2</div>
+        <div class="items">data3</div>
+        <div class="items">data4</div>
+    </div>
+</body>
+</html>
